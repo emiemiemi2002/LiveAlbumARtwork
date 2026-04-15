@@ -1,0 +1,61 @@
+# Directorios autogenerados por Unity (NO SUBIR)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]serSettings/
+
+# Paquete Vuforia Engine (NO SUBIR, ya que es un archivo grande y se puede descargar desde el sitio oficial de Vuforia)
+/Packages/com.ptc.vuforia.engine-11.4.4.tgz
+
+# Capturas de memoria y grabaciones (suelen ser muy pesadas)
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Caché de Visual Studio y Gradle
+.vs/
+.gradle/
+
+# Archivos de solución y proyectos autogenerados por editores de código (Visual Studio, Rider, etc.)
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Archivos meta generados por Unity para los archivos ignorados
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Reportes de crash de Unity
+sysinfo.txt
+crashlytics-build.properties
+
+# Archivos compilados
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Archivos ocultos del sistema operativo (Windows / macOS)
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
