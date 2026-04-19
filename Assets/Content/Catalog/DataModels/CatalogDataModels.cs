@@ -56,6 +56,7 @@ namespace LiveAlbumARtwork.Content.Catalog.DataModels
 
     /// <summary>
     /// Define los assets visuales y los targets de Vuforia específicos para una versión del álbum.
+    /// Puede sobrescribir el audio y los tracks si la edición lo requiere.
     /// </summary>
     [Serializable]
     public class AlbumVariant
@@ -71,6 +72,16 @@ namespace LiveAlbumARtwork.Content.Catalog.DataModels
 
         [JsonProperty("VideoAssetId")]
         public string VideoAssetId { get; set; }
+
+        // --- NUEVAS PROPIEDADES DE AUDIO (OVERRIDE) ---
+
+        // Ruta del audio alternativo (ej. con bonus tracks). Puede ser null.
+        [JsonProperty("AudioPreviewOverride")]
+        public string AudioPreviewOverride { get; set; }
+
+        // Secuencia temporal específica para este audio alternativo. Puede ser null.
+        [JsonProperty("TrackSequenceOverride")]
+        public List<TrackSequence> TrackSequenceOverride { get; set; }
     }
 
     /// <summary>
