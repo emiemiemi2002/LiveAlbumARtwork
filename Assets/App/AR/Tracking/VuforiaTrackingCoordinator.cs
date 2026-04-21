@@ -25,8 +25,7 @@ namespace LiveAlbumARtwork.App.AR.Tracking
 
         void OnDestroy()
         {
-            // Buena práctica: siempre desuscribirse de los eventos al destruir el objeto
-            // para evitar NullReferenceExceptions.
+            // Nos desuscribimos de los eventos nativos de Vuforia al destruir el objeto para evitar NullReferenceExceptions.
             if (_cloudRecoBehaviour != null)
             {
                 _cloudRecoBehaviour.UnregisterOnInitializedEventHandler(OnInitialized);
@@ -47,8 +46,7 @@ namespace LiveAlbumARtwork.App.AR.Tracking
             // este evento 60 veces por segundo mientras el target siga en cámara.
             _cloudRecoBehaviour.enabled = false;
 
-            // 2. ¡Aquí ocurre la magia del desacoplamiento!
-            // Publicamos el evento. No sabemos quién lo escuchará (UI, SessionManager), y no nos importa.
+            // 2. Publicamos el evento. No sabemos quién lo escuchará (UI, SessionManager), y no nos importa.
             EventBus<TargetDetectedEvent>.Publish(new TargetDetectedEvent(result.TargetName));
         }
 
